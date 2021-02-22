@@ -3,11 +3,52 @@ import React from 'react';
 import Badge from 'react-bootstrap/Badge';
 let marked = require("marked");
 
+const initialMarkdown = `
+### **Headers**
+
+# Header 1
+## Header 2
+### Header 3
+
+### **List (ordered)**
+
+1. List item 1
+2. List item 2
+3. List item 3
+
+### **List (unordered)**
+
+- item
+- item
+- item
+
+### **Blockquote**
+
+> block quote
+
+### **Code Block**
+
+\`\`\`
+const x = 2+2
+
+\`\`\`
+
+### **Inline Code**
+
+\`code block\`
+
+### **Link**
+[freeCodeCamp](https://www.freecodecamp.org/learn)
+
+### **Image**
+![React Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
+`
+
 export default class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      markdown: '',
+      markdown: initialMarkdown,
     };
   }
 
@@ -26,7 +67,7 @@ export default class App extends React.Component {
 
     var outputStyle = {
       width: '400px',
-      height: '50vh',
+      height: 'auto',
       backgroundColor: '#DCDCDC',
       marginLeft: 'auto',
       marginRight: 'auto',
@@ -74,7 +115,7 @@ export default class App extends React.Component {
   <div style={outputStyle}>
   </div>
   <div id = 'preview' style={outputStyle}
-    dangerouslySetInnerHTML={{__html: marked(this.state.markdown)}}
+    dangerouslySetInnerHTML={{__html: marked(this.state.markdown, {breaks: true})}}
     ></div>
 
     </div>
