@@ -1,4 +1,4 @@
-##App.js is the file that I am working out of. 
+## App.js is the file that I am working out of. 
 
 # Getting Started with Create React App
 
