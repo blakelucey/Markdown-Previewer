@@ -24,23 +24,29 @@ const initialMarkdown = `
 
 ### **Blockquote**
 
-> block quote
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
 
 ### **Code Block**
 
 \`\`\`
-const x = 2+2
+const x = 2
+const y = 3
+const z = x + y
 
 \`\`\`
 
 ### **Inline Code**
 
-\`code block\`
+\`const x = 2\`
 
 ### **Link**
+
 [freeCodeCamp](https://www.freecodecamp.org/learn)
 
 ### **Image**
+
 ![React Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
 `
 
@@ -59,7 +65,7 @@ export default class App extends React.Component {
   render(){
     var inputStyle = {
       width: '400px',
-      height: '50vh',
+      height: '1000px',
       marginLeft: 'auto',
       marginRight: 'auto',
       padding: '10px'
